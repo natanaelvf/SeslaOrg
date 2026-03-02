@@ -370,6 +370,22 @@ strong {
   padding-bottom: var(--space-xl);
 }
 
+.formadibilia-poster {
+  max-width: 600px;
+  margin-bottom: var(--space-xl);
+}
+
+.formadibilia-poster img {
+  width: 100%;
+  border: 1px solid var(--gray-800);
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter var(--transition-slow);
+}
+
+.formadibilia-poster:hover img {
+  filter: grayscale(0%) contrast(1);
+}
+
 .formadibilia-intro {
   max-width: 800px;
   margin-bottom: var(--space-xl);
@@ -578,8 +594,16 @@ strong {
 
 .contacto-logos {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+.footer-logo-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
 }
 
 .footer-logo {
@@ -588,8 +612,18 @@ strong {
   transition: opacity var(--transition);
 }
 
-.footer-logo:hover {
+.footer-logo-item:hover .footer-logo {
   opacity: 1;
+}
+
+.footer-logo-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--gray-400);
+  line-height: 1.5;
+  max-width: 160px;
 }
 
 .footer-bottom {
